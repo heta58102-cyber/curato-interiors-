@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CURATO - Interior Collections</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+<style>
+/* Basic Reset */
+body{margin:0;font-family:'Lato',sans-serif;background:linear-gradient(to bottom,#fdf9f2,#f5f0e6);color:#333;scroll-behavior:smooth;}
+h1,h2{font-family:'Playfair Display',serif;margin:0;}
+a{text-decoration:none;color:#d9bfa6;transition:0.3s;}
+a:hover{color:#caa888;}
+
+/* Header */
+header{
+  position:sticky;
+  top:0;
+  background:rgba(255,249,242,0.95);
+  z-index:1000;
+  padding:1rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+header nav a{margin-left:1rem;font-weight:bold;}
+
+/* Hero Section */
+.hero{
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(rgba(250,245,240,0.7), rgba(250,245,240,0.7)), url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+}
+.hero h1{
+  font-size:3.5rem;
+  margin-bottom:1rem;
+  color:#333;
+  animation:textPop 1s ease-in;
+}
+.hero p{
+  font-size:1.3rem;
+  margin-bottom:2rem;
+  animation:fadeInText 2s ease-in;
+}
+.hero button{
+  padding:1rem 2rem;
+  border:none;
+  background:#d9bfa6;
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+  border-radius:8px;
+  transition:all .3s ease;
+}
+.hero button:hover{background:#caa888;}
+
+/* Grid Collections */
+.collections-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:2rem;
+  padding:4rem 2rem;
+}
+.collection-card{
+  background:#fff9f2;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,.1);
+  transform:translateY(50px);
+  opacity:0;
+  transition:all 1s ease;
+}
+.collection-card.visible{
+  transform:translateY(0);
+  opacity:1;
+}
+.collection-card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+.collection-content{
+  padding:1.5rem;
+}
+.collection-content h3{margin-bottom:1rem;color:#6b5b4c;}
+.collection-content p{line-height:1.6;font-size:1rem;color:#555;}
+
+/* Contact Section */
+#contact{
+  padding:4rem 2rem;
+  text-align:center;
+}
+#contact h2{margin-bottom:2rem;}
+.contact-form{
+  max-width:500px;
+  margin:0 auto;
+  padding:2rem;
+  background:#fff9f2;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:1rem;
+  margin-bottom:1rem;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:1rem;
+}
+.contact-form button{
+  padding:1rem 2rem;
+  border:none;
+  background:#d9bfa6;
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+  border-radius:8px;
+  transition:all .3s;
+}
+.contact-form button:hover{background:#caa888;}
+
+/* Footer */
+footer{text-align:center;padding:2rem;background:#e0cbb8;font-size:.9rem;margin-top:2rem;}
+
+/* Animations */
+@keyframes textPop{0%{transform:scale(0)}100%{transform:scale(1)}}
+@keyframes fadeInText{from{opacity:0;}to{opacity:1}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<h1>CURATO</h1>
+<p>Where Design Meets Emotion</p>
+<button onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">Explore Collections</button>
+</section>
+
+<!-- Collections Grid -->
+<section id="collections" class="collections-grid">
+
+<!-- Terracotta Bloom -->
+<div class="collection-card">
+<img src="CURATO INTERIORS/images/Neutral Toned Kitchen with Natural Elements.jpg" alt="Terracotta Bloom">
+<div class="collection-content">
+<h3>Terracotta Bloom</h3>
+<p>Terracotta Bloom embodies warmth and earthy elegance. Natural clay tones and soft floral accents create a cozy and vibrant ambiance for living spaces. This collection combines terracotta textures, handcrafted ceramics, and wooden finishes to bring a grounded yet luxurious feel. Ideal for spaces that require warmth, comfort, and a subtle artistic touch.</p>
+</div>
+</div>
+
+<!-- Nocturne Brass -->
+<div class="collection-card">
+<img src="CURATO INTERIORS/images/Decoración del hogar en colores sobrios_.jpg" alt="Nocturne Brass">
+<div class="collection-content">
+<h3>Nocturne Brass</h3>
+<p>Nocturne Brass captures deep, moody elegance with dark tones and metallic accents. Brass fixtures and luxurious textures complement dark woods and rich fabrics, creating interiors that are both sophisticated and timeless. Perfect for those who seek a dramatic yet refined statement in their living spaces, blending opulence with understated design.</p>
+</div>
+</div>
+
+<!-- Desert Muse -->
+<div class="collection-card">
+<img src="CURATO INTERIORS/images/Explore luxury resort-style bedrooms in Byron Bay.jpg" alt="Desert Muse">
+<div class="collection-content">
+<h3>Desert Muse</h3>
+<p>Desert Muse draws inspiration from sandy dunes and sunlit textures. Soft beige, warm ochres, and organic materials create a serene environment. This collection emphasizes natural stone, woven textiles, and airy layouts to evoke calmness and warmth. Ideal for creating living spaces that feel open, tranquil, and intimately connected to nature’s palette.</p>
+</div>
+</div>
+
+<!-- Warm Minimal -->
+<div class="collection-card">
+<img src="CURATO INTERIORS/images/download (25).jpg" alt="Warm Minimal">
+<div class="collection-content">
+<h3>Warm Minimal</h3>
+<p>Warm Minimal celebrates simplicity and serenity. Neutral tones and natural textures create balanced interiors that feel inviting yet elegant. This collection focuses on clean lines, uncluttered spaces, and subtle materials like linen, wood, and stone to achieve cozy minimalism. Perfect for modern interiors that emphasize calm and sophisticated functionality.</p>
+</div>
+</div>
+
+<!-- Ocean Drift -->
+<div class="collection-card">
+<img src="CURATO INTERIORS/images/download (24).jpg" alt="Ocean Drift">
+<div class="collection-content">
+<h3>Ocean Drift</h3>
+<p>Ocean Drift brings the serenity of water indoors. Soft blues, flowing fabrics, and reflective surfaces emulate the calm of the sea. This collection uses marine-inspired accents, textures, and furniture to evoke tranquility. Ideal for spaces meant for relaxation, meditation, or a subtle coastal charm, blending airy light with fluid design elements.</p>
+</div>
+</div>
+
+<!-- Forest Whisper -->
+<div class="collection-card">
+<img src="CURATO INTERIORS/images/19 Unique Earthy Living Room Ideas For A Cozy Home Makeover - Lovely Harbor.jpg" alt="Forest Whisper">
+<div class="collection-content">
+<h3>Forest Whisper</h3>
+<p>Forest Whisper introduces lush greenery and natural textures indoors. Deep greens, wooden elements, and organic shapes create a calming, rejuvenating atmosphere. Ideal for those seeking interiors that inspire peace and connection with nature, this collection emphasizes biophilic design, natural light, and earthy materials to create holistic and refreshing spaces.</p>
+</div>
+</div>
+
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+<h2>Contact CURATO</h2>
+<form class="contact-form">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>&copy; 2025 CURATO</footer>
+
+<script>
+// Fade-in on scroll
+const cards = document.querySelectorAll('.collection-card');
+window.addEventListener('scroll', () => {
+  const triggerBottom = window.innerHeight * 0.85;
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < triggerBottom){
+      card.classList.add('visible');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
